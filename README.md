@@ -60,7 +60,7 @@ SetFeature buffer:
 00,             //Report ID=0
 E6,             //Command 0xE6 = Write EEPROM
 xx,xx,          //Address
-xx,xx,          //Data to write (2 bytes only)
+xx,xx,          //Data to write (2 bytes only?)
 xx,xx,xx        //Unused
 ```
 
@@ -69,3 +69,54 @@ Code sample:
 ```
 HidD_SetFeature(DevHandle, @setf_buffer, SizeOf(setf_buffer));
 ```
+
+
+### Read XDATA (0xB5)
+Buffers size: 9 bytes
+
+SetFeature buffer:
+```
+00,             //Report ID=0
+B5,             //Command 0xB5 = Read XDATA
+xx,xx,          //Address
+xx,xx,xx,xx,xx  //Unused
+```
+
+GetFeature buffer:
+```
+00,             //Report ID=0
+B5,             //Command 0xB5 = Read XDATA
+xx,xx,          //Address
+xx,             //XDATA Value
+xx,xx,xx,xx     //Unused
+```
+
+Code sample - two calls are used to request memory contents.
+```
+HidD_SetFeature(DevHandle, @setf_buffer, SizeOf(setf_buffer));
+HidD_GetFeature(DevHandle, @getf_buffer, SizeOf(setf_buffer));
+```
+
+
+
+### Write XDATA (0xB6)
+Buffer size: 9 bytes
+
+SetFeature buffer:
+```
+00,             //Report ID=0
+B6,             //Command 0xB6 = Write XDATA
+xx,xx,          //Address
+xx,             //Data to write (1 byte only?)
+xx,xx,xx,xx     //Unused
+```
+
+
+
+### Read SFR (0xC5)
+To be described
+
+
+### Write SFR (0xC6)
+To be described
+
