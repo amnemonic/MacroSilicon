@@ -123,11 +123,3 @@ xx,xx,xx,xx     //Unused
 ```
 
 
-
-### Read SFR (0xC5)
-To be described
-
-
-### Write SFR (0xC6)
-To be described
-
