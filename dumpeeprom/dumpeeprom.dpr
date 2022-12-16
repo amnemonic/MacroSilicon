@@ -62,16 +62,10 @@ var DevHandle: THandle;
     binfile: File;
 begin
   try
-
-    Writeln(IntToStr(ParamCount));
-    Writeln(paramstr(1));
-
     if ParamCount<>1 then begin
       writeln('Usage: dumpeeprom.exe dump.bin');
       exit;
     end;
-
-
 
 
     DevPath := getFirstDevicePath($534d,$2109);
