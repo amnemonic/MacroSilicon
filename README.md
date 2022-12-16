@@ -21,6 +21,15 @@ Knowledge in this repo is basing heavly on data found in following places:
     - USB Audio Device
     - USB Input Device (HID)
 
+## XDATA 
+
+| Decription | Start    | Length   |
+|------------|----------|----------|
+| IRAM       | `0x0000` | `0x0100` |
+| UserRAM    | `0xC000` | `0x2000` |  
+| UserConfig | `0xCBD0` | `0x0030` |
+
+
 
 ## HID Endpoint
 Communication with device is performed by sending and receiving HID feature reports with `reporId==0`. Out of the box it is possible to read EEPROM memory and registers. However BertoldVdb's shown that is possible to extend these capabilites by patching orginal firmware. 
