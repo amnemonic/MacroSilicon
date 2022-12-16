@@ -9,7 +9,7 @@ Knowledge in this repo is basing heavly on data found in following places:
 
  - https://github.com/YuzukiHD/YuzukiHCC
  - https://github.com/BertoldVdb/ms-tools
- - others
+ - https://github.com/contiki-os/contiki/wiki/8051-Memory-Spaces#Memory_Spaces
 
 
 ## Architecture
@@ -22,6 +22,8 @@ Knowledge in this repo is basing heavly on data found in following places:
     - USB Input Device (HID)
 
 ## XDATA 
+The 8051 architecture has three separate address spaces, the core RAM uses an 8 bit address, so can be up to 256 bytes, XDATA is a 16bit address space (64Kbytes) with read/write capability, and the program space is a 16bit address space with execution and read-only data capability. [[1](https://stackoverflow.com/a/2059998/645146)]
+
 
 | Decription | Start    | Length   |
 |------------|----------|----------|
@@ -32,7 +34,7 @@ Knowledge in this repo is basing heavly on data found in following places:
 
 
 ## HID Endpoint
-Communication with device is performed by sending and receiving HID feature reports with `reporId==0`. Out of the box it is possible to read EEPROM memory and registers. However BertoldVdb's shown that is possible to extend these capabilites by patching orginal firmware. 
+Communication with device is performed by sending and receiving HID feature reports with `reporId==0`. Out of the box it is possible to read EEPROM memory and 8051 XDATA. However BertoldVdb's shown that is possible to extend these capabilites by patching orginal firmware. 
 
 ### Read EEPROM (0xE5)
 Buffers size: 9 bytes
