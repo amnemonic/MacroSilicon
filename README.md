@@ -25,11 +25,24 @@ Knowledge in this repo is basing heavly on data found in following places:
 The 8051 architecture has three separate address spaces, the core RAM uses an 8 bit address, so can be up to 256 bytes, XDATA is a 16bit address space (64Kbytes) with read/write capability, and the program space is a 16bit address space with execution and read-only data capability. [[1](https://stackoverflow.com/a/2059998/645146)]
 
 
-| Decription | Start    | Length   |
-|------------|----------|----------|
-| IRAM       | `0x0000` | `0x0100` |
-| UserRAM    | `0xC000` | `0x2000` |  
-| UserConfig | `0xCBD0` | `0x0030` |
+
+| Decription                                            | Start    | End     |  Length   |
+|-------------------------------------------------------|---------:|--------:|----------:|
+| Internal RAM                                          |   `0x00` |   `0x7F`|    `0x80` |
+| Special fuction registers (SFRs)                      |   `0x80` |   `0xFF`|    `0x80` |
+| _Memory hole (filled with 0xFF)_                      | `0x0100` | `0x7FFF`|  `0x7F00` |
+| Unknown data (looks 32bit aligned)                    | `0x8000` | `0x8FFF`|  `0x1000` |
+| _Memory hole (filled with 0xFF)_                      | `0x9000` | `0xBFFF`|  `0x3000` |
+| UserRAM                                               | `0xC000` | `0xDFFF`|  `0x2000` |  
+| UserConfig                                            | `0xCBD0` | `0xCBFF`|  `0x0030` |
+| Code loaded from EEPROM                               | `0xCC00` | Variable| Variable  |
+| Unknown data (looks 32bit aligned)                    | `0xE000` | `0xEFFF`|  `0x1000` |
+| Filled with 0xFF except:<br>@0xF000, @0xF0E0, @0xF1F0 | `0xF000` | `0xF4FF`|  `0x0500` |
+| Filled with 0x00 except:<br>@0xF520                   | `0xF500` | `0xF5FF`|  `0x0100` |
+| Filled with 0xFF                                      | `0xF600` | `0xF7FF`|  `0x0100` |
+| Unknown                                               | `0xF800` | `0xFAFF`|  `0x0300` |
+| _Memory hole (filled with 0xFF)_                      | `0xFB00` | `0xFCFF`|  `0x2000` |
+| Unknown                                               | `0xFD00` | `0xFFFF`|  `0x0300` |
 
 
 
