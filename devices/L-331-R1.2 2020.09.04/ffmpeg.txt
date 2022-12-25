@@ -1,0 +1,76 @@
+ffmpeg -f dshow -list_options true -i video="USB Video" -hide_banner
+[dshow @ 000001912dfdcdc0] DirectShow video device options (from video devices)
+[dshow @ 000001912dfdcdc0]  Pin "Capture" (alternative pin name "0")
+[dshow @ 000001912dfdcdc0]   vcodec=mjpeg  min s=1920x1080 fps=10 max s=1920x1080 fps=60.0002
+[dshow @ 000001912dfdcdc0]   vcodec=mjpeg  min s=1920x1080 fps=10 max s=1920x1080 fps=60.0002 (pc, bt470bg/bt709/unknown, center)
+[dshow @ 000001912dfdcdc0]   vcodec=mjpeg  min s=1600x1200 fps=10 max s=1600x1200 fps=60.0002
+[dshow @ 000001912dfdcdc0]   vcodec=mjpeg  min s=1600x1200 fps=10 max s=1600x1200 fps=60.0002 (pc, bt470bg/bt709/unknown, center)
+[dshow @ 000001912dfdcdc0]   vcodec=mjpeg  min s=1360x768 fps=10 max s=1360x768 fps=60.0002
+[dshow @ 000001912dfdcdc0]   vcodec=mjpeg  min s=1360x768 fps=10 max s=1360x768 fps=60.0002 (pc, bt470bg/bt709/unknown, center)
+[dshow @ 000001912dfdcdc0]   vcodec=mjpeg  min s=1280x1024 fps=10 max s=1280x1024 fps=60.0002
+[dshow @ 000001912dfdcdc0]   vcodec=mjpeg  min s=1280x1024 fps=10 max s=1280x1024 fps=60.0002 (pc, bt470bg/bt709/unknown, center)
+[dshow @ 000001912dfdcdc0]   vcodec=mjpeg  min s=1280x960 fps=10 max s=1280x960 fps=60.0002
+[dshow @ 000001912dfdcdc0]   vcodec=mjpeg  min s=1280x960 fps=10 max s=1280x960 fps=60.0002 (pc, bt470bg/bt709/unknown, center)
+[dshow @ 000001912dfdcdc0]   vcodec=mjpeg  min s=1280x720 fps=10 max s=1280x720 fps=60.0002
+[dshow @ 000001912dfdcdc0]   vcodec=mjpeg  min s=1280x720 fps=10 max s=1280x720 fps=60.0002 (pc, bt470bg/bt709/unknown, center)
+[dshow @ 000001912dfdcdc0]   vcodec=mjpeg  min s=1024x768 fps=10 max s=1024x768 fps=60.0002
+[dshow @ 000001912dfdcdc0]   vcodec=mjpeg  min s=1024x768 fps=10 max s=1024x768 fps=60.0002 (pc, bt470bg/bt709/unknown, center)
+[dshow @ 000001912dfdcdc0]   vcodec=mjpeg  min s=800x600 fps=10 max s=800x600 fps=60.0002
+[dshow @ 000001912dfdcdc0]   vcodec=mjpeg  min s=800x600 fps=10 max s=800x600 fps=60.0002 (pc, bt470bg/bt709/unknown, center)
+[dshow @ 000001912dfdcdc0]   vcodec=mjpeg  min s=720x576 fps=10 max s=720x576 fps=60.0002
+[dshow @ 000001912dfdcdc0]   vcodec=mjpeg  min s=720x576 fps=10 max s=720x576 fps=60.0002 (pc, bt470bg/bt709/unknown, center)
+[dshow @ 000001912dfdcdc0]   vcodec=mjpeg  min s=720x480 fps=10 max s=720x480 fps=60.0002
+[dshow @ 000001912dfdcdc0]   vcodec=mjpeg  min s=720x480 fps=10 max s=720x480 fps=60.0002 (pc, bt470bg/bt709/unknown, center)
+[dshow @ 000001912dfdcdc0]   vcodec=mjpeg  min s=640x480 fps=10 max s=640x480 fps=60.0002
+[dshow @ 000001912dfdcdc0]   vcodec=mjpeg  min s=640x480 fps=10 max s=640x480 fps=60.0002 (pc, bt470bg/bt709/unknown, center)
+[dshow @ 000001912dfdcdc0]   pixel_format=yuyv422  min s=1280x720 fps=10 max s=1280x720 fps=10
+[dshow @ 000001912dfdcdc0]   pixel_format=yuyv422  min s=1280x720 fps=10 max s=1280x720 fps=10 (tv, bt470bg/bt709/unknown, topleft)
+[dshow @ 000001912dfdcdc0]   pixel_format=yuyv422  min s=1920x1080 fps=5 max s=1920x1080 fps=5
+[dshow @ 000001912dfdcdc0]   pixel_format=yuyv422  min s=1920x1080 fps=5 max s=1920x1080 fps=5 (tv, bt470bg/bt709/unknown, topleft)
+[dshow @ 000001912dfdcdc0]   pixel_format=yuyv422  min s=1600x1200 fps=5 max s=1600x1200 fps=5
+[dshow @ 000001912dfdcdc0]   pixel_format=yuyv422  min s=1600x1200 fps=5 max s=1600x1200 fps=5 (tv, bt470bg/bt709/unknown, topleft)
+[dshow @ 000001912dfdcdc0]   pixel_format=yuyv422  min s=1360x768 fps=8 max s=1360x768 fps=8
+[dshow @ 000001912dfdcdc0]   pixel_format=yuyv422  min s=1360x768 fps=8 max s=1360x768 fps=8 (tv, bt470bg/bt709/unknown, topleft)
+[dshow @ 000001912dfdcdc0]   pixel_format=yuyv422  min s=1280x1024 fps=8 max s=1280x1024 fps=8
+[dshow @ 000001912dfdcdc0]   pixel_format=yuyv422  min s=1280x1024 fps=8 max s=1280x1024 fps=8 (tv, bt470bg/bt709/unknown, topleft)
+[dshow @ 000001912dfdcdc0]   pixel_format=yuyv422  min s=1280x960 fps=8 max s=1280x960 fps=8
+[dshow @ 000001912dfdcdc0]   pixel_format=yuyv422  min s=1280x960 fps=8 max s=1280x960 fps=8 (tv, bt470bg/bt709/unknown, topleft)
+[dshow @ 000001912dfdcdc0]   pixel_format=yuyv422  min s=1024x768 fps=10 max s=1024x768 fps=10
+[dshow @ 000001912dfdcdc0]   pixel_format=yuyv422  min s=1024x768 fps=10 max s=1024x768 fps=10 (tv, bt470bg/bt709/unknown, topleft)
+[dshow @ 000001912dfdcdc0]   pixel_format=yuyv422  min s=800x600 fps=5 max s=800x600 fps=20
+[dshow @ 000001912dfdcdc0]   pixel_format=yuyv422  min s=800x600 fps=5 max s=800x600 fps=20 (tv, bt470bg/bt709/unknown, topleft)
+[dshow @ 000001912dfdcdc0]   pixel_format=yuyv422  min s=720x576 fps=5 max s=720x576 fps=25
+[dshow @ 000001912dfdcdc0]   pixel_format=yuyv422  min s=720x576 fps=5 max s=720x576 fps=25 (tv, bt470bg/bt709/unknown, topleft)
+[dshow @ 000001912dfdcdc0]   pixel_format=yuyv422  min s=720x480 fps=5 max s=720x480 fps=30
+[dshow @ 000001912dfdcdc0]   pixel_format=yuyv422  min s=720x480 fps=5 max s=720x480 fps=30 (tv, bt470bg/bt709/unknown, topleft)
+[dshow @ 000001912dfdcdc0]   pixel_format=yuyv422  min s=640x480 fps=5 max s=640x480 fps=30
+[dshow @ 000001912dfdcdc0]   pixel_format=yuyv422  min s=640x480 fps=5 max s=640x480 fps=30 (tv, bt470bg/bt709/unknown, topleft)
+
+
+
+ffmpeg -f dshow -list_options true -i audio="Digital Audio Interface (USB Digital Audio)" -hide_banner
+[dshow @ 000001f002bfcdc0] DirectShow audio only device options (from audio devices)
+[dshow @ 000001f002bfcdc0]  Pin "Capture" (alternative pin name "Capture")
+[dshow @ 000001f002bfcdc0]   ch= 2, bits=16, rate= 44100
+    Last message repeated 1 times
+[dshow @ 000001f002bfcdc0]   ch= 1, bits=16, rate= 44100
+[dshow @ 000001f002bfcdc0]   ch= 2, bits=16, rate= 32000
+[dshow @ 000001f002bfcdc0]   ch= 1, bits=16, rate= 32000
+[dshow @ 000001f002bfcdc0]   ch= 2, bits=16, rate= 22050
+[dshow @ 000001f002bfcdc0]   ch= 1, bits=16, rate= 22050
+[dshow @ 000001f002bfcdc0]   ch= 2, bits=16, rate= 11025
+[dshow @ 000001f002bfcdc0]   ch= 1, bits=16, rate= 11025
+[dshow @ 000001f002bfcdc0]   ch= 2, bits=16, rate=  8000
+[dshow @ 000001f002bfcdc0]   ch= 1, bits=16, rate=  8000
+[dshow @ 000001f002bfcdc0]   ch= 2, bits= 8, rate= 44100
+[dshow @ 000001f002bfcdc0]   ch= 1, bits= 8, rate= 44100
+[dshow @ 000001f002bfcdc0]   ch= 2, bits= 8, rate= 22050
+[dshow @ 000001f002bfcdc0]   ch= 1, bits= 8, rate= 22050
+[dshow @ 000001f002bfcdc0]   ch= 2, bits= 8, rate= 11025
+[dshow @ 000001f002bfcdc0]   ch= 1, bits= 8, rate= 11025
+[dshow @ 000001f002bfcdc0]   ch= 2, bits= 8, rate=  8000
+[dshow @ 000001f002bfcdc0]   ch= 1, bits= 8, rate=  8000
+[dshow @ 000001f002bfcdc0]   ch= 2, bits=16, rate= 48000
+[dshow @ 000001f002bfcdc0]   ch= 1, bits=16, rate= 48000
+[dshow @ 000001f002bfcdc0]   ch= 2, bits=16, rate= 96000
+[dshow @ 000001f002bfcdc0]   ch= 1, bits=16, rate= 96000
