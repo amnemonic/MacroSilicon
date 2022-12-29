@@ -26,7 +26,7 @@ The 8051 architecture has three separate address spaces, the core RAM uses an 8 
 
 
 
-| Decription                                            | Start    | End     |  Length   |
+| Description                                           | Start    | End     |  Length   |
 |-------------------------------------------------------|---------:|--------:|----------:|
 | Internal RAM                                          |   `0x00` |   `0x7F`|    `0x80` |
 | Special fuction registers (SFRs)                      |   `0x80` |   `0xFF`|    `0x80` |
@@ -47,10 +47,11 @@ The 8051 architecture has three separate address spaces, the core RAM uses an 8 
 
 
 ## HID Endpoint
-Communication with device is performed by sending and receiving HID feature reports with `reporId==0`. Out of the box it is possible to read EEPROM memory and 8051 XDATA. However BertoldVdb's shown that is possible to extend these capabilites by patching orginal firmware. 
+Communication with device is performed by sending and receiving HID feature reports with `reportId==0`. Out of the box it is possible to read EEPROM memory and 8051 XDATA. However BertoldVdb shown that is possible to extend these capabilites by patching orginal firmware. 
 
 ### Read EEPROM (0xE5)
-Buffers size: 9 bytes
+ - Buffers size: 9 bytes ( 1 byte for report ID=0 and 8 bytes of data)
+ - Applies only to MS2109
 
 SetFeature buffer:
 ```
@@ -71,13 +72,14 @@ xx,xx,xx,xx,xx  //EEPROM memory content (5 bytes)
 Code sample - two calls are used to request memory contents.
 ```
 HidD_SetFeature(DevHandle, @setf_buffer, SizeOf(setf_buffer));
-HidD_GetFeature(DevHandle, @getf_buffer, SizeOf(setf_buffer));
+HidD_GetFeature(DevHandle, @getf_buffer, SizeOf(getf_buffer));
 ```
 
 
 
 ### Write EEPROM (0xE6)
-Buffer size: 9 bytes
+ - Buffers size: 9 bytes ( 1 byte for report ID=0 and 8 bytes of data)
+ - Applies only to MS2109
 
 SetFeature buffer:
 ```
@@ -96,7 +98,8 @@ HidD_SetFeature(DevHandle, @setf_buffer, SizeOf(setf_buffer));
 
 
 ### Read XDATA (0xB5)
-Buffers size: 9 bytes
+ - Buffers size: 9 bytes ( 1 byte for report ID=0 and 8 bytes of data)
+ - Applies to MS2109 and MS2130
 
 SetFeature buffer:
 ```
@@ -118,13 +121,14 @@ xx,xx,xx,xx     //Unused
 Code sample - two calls are used to request memory contents.
 ```
 HidD_SetFeature(DevHandle, @setf_buffer, SizeOf(setf_buffer));
-HidD_GetFeature(DevHandle, @getf_buffer, SizeOf(setf_buffer));
+HidD_GetFeature(DevHandle, @getf_buffer, SizeOf(getf_buffer));
 ```
 
 
 
 ### Write XDATA (0xB6)
-Buffer size: 9 bytes
+ - Buffers size: 9 bytes ( 1 byte for report ID=0 and 8 bytes of data)
+ - Applies to MS2109 and MS2130
 
 SetFeature buffer:
 ```
