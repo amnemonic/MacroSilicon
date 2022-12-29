@@ -50,7 +50,7 @@ The 8051 architecture has three separate address spaces, the core RAM uses an 8 
 Communication with device is performed by sending and receiving HID feature reports with `reportId==0`. Out of the box it is possible to read EEPROM memory and 8051 XDATA. However BertoldVdb shown that is possible to extend these capabilites by patching orginal firmware. 
 
 ### Read EEPROM (0xE5)
- - Buffers size: 9 bytes ( 1 byte for report ID=0 and 8 bytes of data)
+ - Buffers size: 9 bytes (1 byte for report ID=0 and 8 bytes of data)
  - Applies only to MS2109
 
 SetFeature buffer:
@@ -78,7 +78,7 @@ HidD_GetFeature(DevHandle, @getf_buffer, SizeOf(getf_buffer));
 
 
 ### Write EEPROM (0xE6)
- - Buffers size: 9 bytes ( 1 byte for report ID=0 and 8 bytes of data)
+ - Buffers size: 9 bytes (1 byte for report ID=0 and 8 bytes of data)
  - Applies only to MS2109
 
 SetFeature buffer:
@@ -98,7 +98,7 @@ HidD_SetFeature(DevHandle, @setf_buffer, SizeOf(setf_buffer));
 
 
 ### Read XDATA (0xB5)
- - Buffers size: 9 bytes ( 1 byte for report ID=0 and 8 bytes of data)
+ - Buffers size: 9 bytes (1 byte for report ID=0 and 8 bytes of data)
  - Applies to MS2109 and MS2130
 
 SetFeature buffer:
@@ -127,7 +127,7 @@ HidD_GetFeature(DevHandle, @getf_buffer, SizeOf(getf_buffer));
 
 
 ### Write XDATA (0xB6)
- - Buffers size: 9 bytes ( 1 byte for report ID=0 and 8 bytes of data)
+ - Buffers size: 9 bytes (1 byte for report ID=0 and 8 bytes of data)
  - Applies to MS2109 and MS2130
 
 SetFeature buffer:
